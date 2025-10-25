@@ -85,6 +85,12 @@ window-rule {
     clip-to-geometry true
 }
 
+window-rule {
+    default-column-width {}
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
