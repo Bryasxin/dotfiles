@@ -1,0 +1,50 @@
+/*
+  TODO 已知 Issue:
+    - 在 niri/workspace 的 button 被鼠标悬浮到时, 背景颜色会被改成 white
+*/
+
+* {
+  border: none;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+tooltip {
+  background-color: rgba(41, 42, 52, 0.8);
+  border: 2px solid rgb(69, 71, 87);
+}
+
+tooltip label {
+  color: white;
+}
+
+#network,
+#pulseaudio,
+#clock,
+#memory,
+#cpu,
+#tray,
+#workspaces {
+  margin: 12px 12px 0 12px;
+  padding: 4px 12px;
+
+  color: white;
+  background-color: rgba(41, 42, 52, 0.8);
+  border: 2px solid rgb(69, 71, 87);
+  border-radius: 8px;
+}
+
+#workspaces button {
+  transition: none;
+  padding: 0 4px 0 8px;
+  color: white;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: rgb(69, 71, 87);
+  color: white;
+}

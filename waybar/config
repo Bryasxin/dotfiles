@@ -1,0 +1,52 @@
+{
+  "layer": "top",
+  "modules-left": ["niri/workspaces", "cpu", "memory", "tray"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio"],
+
+  // modules-left
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": " ",
+      "default": " "
+    }
+  },
+  "cpu": {
+    "interval": 15,
+    "format": " {usage}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  // modules-center
+  "clock": {
+    "tooltip": false,
+    "format": "  {:%I:%M %y/%m/%d}"
+  },
+
+  // modules-right
+  "network": {
+    "tooltip": false,
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀 {ifname} | {bandwidthUpBytes} {bandwidthDownBytes}"
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "{icon} {volume}%",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-icons": {
+      "default": ["", "", ""]
+    }
+  }
+}
